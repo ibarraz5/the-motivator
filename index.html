@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balance App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .app {
+    text-align: center;
+  }
+  .balance {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="balance">Available Balance: $<span id="money">0</span></div>
+  <button id="taskButton">Task Completed</button>
+</div>
+
+<script>
+  let balance = 0;
+
+  document.getElementById("taskButton").addEventListener("click", function() {
+    balance+=100;
+    document.getElementById("money").textContent = balance;
+  });
+</script>
+</body>
+</html>
